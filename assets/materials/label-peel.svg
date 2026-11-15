@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" preserveAspectRatio="none">
+<!-- Original local surface marks; no raster assets. -->
+<defs>
+<linearGradient id="backing" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#aab8c3"/><stop offset="1" stop-color="#dce3e8"/></linearGradient>
+<linearGradient id="curl" x1="0" y1="0" x2="1" y2="1"><stop offset=".31" stop-color="#fff"/><stop offset=".58" stop-color="#f9fbfc"/><stop offset=".73" stop-color="#c9d3dc"/><stop offset=".84" stop-color="#f1f5f7"/><stop offset="1" stop-color="#fff"/></linearGradient>
+</defs>
+<path d="M0 32 32 0V32Z" fill="url(#backing)"/>
+<path d="M3 31C16 28 28 14 31 3L32 32Z" fill="#465d6e" opacity=".15"/>
+<path d="M5 30C17 26 26 16 30 5L31 30Z" fill="#526b7d" opacity=".25"/>
+<path d="M0 0H31C29 14 16 28 0 31Z" fill="url(#curl)"/>
+<path d="M31 1C28 15 16 28 1 31" fill="none" stroke="#a0afbc" stroke-width=".8"/>
+<path d="M29 2C27 14 15 26 2 29" fill="none" stroke="#fff" stroke-width=".8" opacity=".9"/>
+</svg>

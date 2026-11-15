@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" preserveAspectRatio="none">
+<!-- Original local surface marks; no raster assets. -->
+<g fill="#c0cad2" opacity=".96">
+<path d="M0 34v27l5-4 2-9-3-5-1-7zM188 0h29l-4 4-7 2-8-2-4 2zM558 0h29l-5 4-8 3-7-3-5 1zM600 224v25l-4-2-3-10 3-6zM139 400h29l-4-5-7-3-8 4zM524 400h30l-4-4-11-2-6 3z"/>
+</g><g fill="#758692" opacity=".45"><path d="M1 40v15l3-3-2-7zM193 1h18l-4 3-10-1zM530 399h20l-5-2-9 1z"/></g>
+<path d="M563 3l10 3 8-3-7 1zM3 47l1 7 2-5z" fill="#e8edf0" opacity=".85"/>
+</svg>

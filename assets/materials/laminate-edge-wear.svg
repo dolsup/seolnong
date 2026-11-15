@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" preserveAspectRatio="none">
+<!-- Original local surface marks; no raster assets. -->
+<g fill="none" stroke-linecap="round">
+<path d="M4 344l1 25 3 12M150 397h30M554 3h28" stroke="#c6d2c7" stroke-width="2.1" opacity=".8"/>
+<path d="M7 350v21M155 395h19M560 5h15" stroke="#799b8e" stroke-width="1.1" opacity=".75"/>
+<path d="M569 355l-3 18M574 360l-2 8" stroke="#86a397" stroke-width="1" opacity=".45"/>
+</g>
+</svg>

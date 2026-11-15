@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" preserveAspectRatio="none">
+<!-- Original local surface marks; no raster assets. -->
+<g fill="none" stroke-linecap="round">
+<g stroke="#7f93a3" opacity=".57">
+<path d="M15 319c31-3 58-3 87-8M24 326l66-8M35 334l57-9M59 338l31-7" stroke-width="1.3"/>
+<path d="M511 46l61-12M523 54l42-11M544 59l26-9" stroke-width="1.2"/>
+<path d="M158 379l70-5M183 386l39-5M202 391l17-3" stroke-width="1.1"/>
+<path d="M581 224l-4 48M588 233l-4 30" stroke-width="1.2"/>
+</g><g stroke="#fff" opacity=".82">
+<path d="M17 320c30-3 57-3 85-8M36 335l55-9M513 47l58-12M160 380l67-5" stroke-width=".65"/>
+</g></g>
+</svg>

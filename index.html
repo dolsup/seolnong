@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>설농체 — Seolnong</title>
+  <meta name="description" content="일본의 한국어 안내판을 보고 만든 글꼴, 설농체. 현대 한글 11,172자, Regular, SIL OFL. 직접 써 보고 무료로 내려받으세요.">
+  <link rel="canonical" href="https://dolsup.github.io/seolnong/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dolsup.github.io/seolnong/">
+  <meta property="og:title" content="설농체 — Seolnong">
+  <meta property="og:description" content="일본의 한국어 안내판을 보고 만든 글꼴.">
+  <meta property="og:image" content="https://dolsup.github.io/seolnong/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="옅은 파란색 바탕의 설농체 제목과 일본어·영어·한글 안내판 견본">
+  <link rel="icon" href="./favicon.svg?v=seol" type="image/svg+xml">
+  <link rel="preload" href="./fonts/Seolnong-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/KosugiMaru-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/Arimo-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./assets/styles.css">
+  <script src="./assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#tester">文字を入れる / 문자를 넣다</a>
+  <main id="top">
+    <div class="opening">
+      <section class="hero page-width" aria-labelledby="title">
+        <div class="hero-copy">
+          <h1 id="title" class="bilingual hero-title"><span lang="ja">ソルロン体</span><span lang="ko">설농체</span></h1>
+          <div class="hero-description bilingual"><p lang="ja">日本の韓国語案内をもとに作った、<br>ハングル書体です。</p><p lang="ko">일본의 한국어 안내를 바탕으로 만든,<br>한글 글꼴입니다.</p></div>
+          <div class="hero-actions">
+            <a class="download-main" href="#download"><span class="bilingual"><span lang="ja">フォントをダウンロード</span><span lang="ko">폰트를 내려받다</span></span><span class="download-arrow" aria-hidden="true">↓</span></a>
+          </div>
+
+        </div>
+        <div class="hero-object"><figure class="front-sign__signpost" aria-label="架空の公共施設の案内板 / 가상의 공공시설 안내판">
+  <div class="front-sign__model">
+    <div class="front-sign__post" aria-hidden="true"></div>
+    <div class="front-sign__frame material-printed material-painted" data-wear="light">
+          <span class="material-finish" aria-hidden="true"></span>
+      <div class="front-sign__row">
+        <svg class="front-sign__arrow" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path d="M50 16 12 50 50 84V62H88V38H50Z"/></svg>
+        <div class="front-sign__wording"><p class="front-sign__jp" lang="ja">駅前広場</p><p class="front-sign__en" lang="en">Station Plaza</p><p class="front-sign__ko" lang="ko">역전광장</p></div>
+        <span class="front-sign__distance">200 m</span>
+      </div>
+      <div class="front-sign__row">
+        <svg class="front-sign__arrow" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path d="M16 50 50 12 84 50H62V88H38V50Z"/></svg>
+        <div class="front-sign__wording"><p class="front-sign__jp" lang="ja">市民会館</p><p class="front-sign__en" lang="en">Civic Hall</p><p class="front-sign__ko" lang="ko">시민회관</p></div>
+        <span class="front-sign__distance">400 m</span>
+      </div>
+      <div class="front-sign__row">
+        <svg class="front-sign__arrow" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path d="M50 16 88 50 50 84V62H12V38H50Z"/></svg>
+        <div class="front-sign__wording"><p class="front-sign__jp" lang="ja">中央公園</p><p class="front-sign__en" lang="en">Central Park</p><p class="front-sign__ko" lang="ko">중앙공원</p></div>
+        <span class="front-sign__distance">600 m</span>
+      </div>
+      <i class="front-sign__fastener front-sign__fastener--top" aria-hidden="true"></i>
+      <i class="front-sign__fastener front-sign__fastener--bottom" aria-hidden="true"></i>
+    </div>
+
+  </div>
+</figure></div>
+      </section>
+    </div>
+
+    <section class="tester page-width" id="tester" aria-labelledby="tester-title">
+      <h2 id="tester-title" class="bilingual"><span lang="ja">文字を入れてください。</span><span lang="ko">문자를 넣어 주십시오.</span></h2>
+      <div class="type-toolbar">
+        <label class="preset-select"><span class="sr-only">見本の文 / 견본의 문장</span><select id="sample-preset"><option value="shopping" selected>お店 / 가게</option><option value="notice">お手洗い / 화장실</option><option value="pangram">パングラム / 팬그램</option><option value="name">雪濃湯 / 설농탕</option><option value="custom" hidden>入力中 / 입력 중</option></select></label>
+        <label class="range-label"><span class="bilingual"><span lang="ja">文字の大きさ</span><span lang="ko">문자의 크기</span></span><input id="type-size" type="range" min="24" max="120" value="48" aria-label="文字の大きさ / 문자의 크기"><output id="size-value">48</output></label>
+        <label class="cap-toggle"><input id="upright-toggle" type="checkbox"><span class="switch" aria-hidden="true"></span><span class="bilingual"><span lang="ja">ㅎ・ㅊの上の線を縦に</span><span lang="ko">ㅎ·ㅊ 위의 선을 세로로</span></span></label>
+        <button id="reset-type" class="quiet-button bilingual" type="button"><span lang="ja">元に戻す</span><span lang="ko">원래로 돌리다</span></button>
+      </div>
+      <label class="sr-only" for="type-input">文字を入れてください / 문자를 넣어 주십시오</label>
+      <div class="shop-board"><textarea id="type-input" class="seolnong" rows="1" spellcheck="false" maxlength="400">상품에는 손을 대지 말아주세요.
+계산은 이쪽에서 부탁합니다.</textarea></div>
+      <p id="font-status" role="status" class="font-status"></p>
+    </section>
+
+    <section class="sign-application shop-application" id="examples" aria-label="店と駐車場の案内 / 가게와 주차장의 안내">
+<div class="sign-rack shop-rack page-width">
+<div class="rack-column rack-shop">
+<figure class="sign-stage" aria-label="品切れの案内 / 품절의 안내">
+          <div class="sign-surface sold-out-sign facility-plate material-printed material-painted" data-wear="medium">
+          <span class="material-finish" aria-hidden="true"></span>
+          <i class="plate-fixing plate-fixing--left" aria-hidden="true"></i><i class="plate-fixing plate-fixing--right" aria-hidden="true"></i>
+            <div class="sold-out-inner sign-copy">
+              <p lang="ja">売り切れの際は、<br>ご容赦ください。</p>
+              <p lang="ko">품절의 때는,<br>용서해 주십시오.</p>
+            </div>
+          </div>
+        </figure>
+<figure class="sign-stage" aria-label="食器の案内 / 식기의 안내">
+          <div class="sign-surface dishes-sign facility-plate material-engraved material-acrylic" data-wear="light">
+          <span class="material-finish" aria-hidden="true"></span>
+            <div class="dishes-inner">
+              <svg class="dish-symbol" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 75h74M20 67h60M27 31h46c0 21-9 30-23 30S27 52 27 31Z"/><path d="M40 61v6h20v-6M27 31c8 5 38 5 46 0M80 24v35M85 24v14M90 24v14M80 38h10M15 24v35M11 24v14c0 6 8 6 8 0V24"/></g></svg>
+              <div class="dishes-copy sign-copy"><p lang="ja">食器類はテーブルに<br>置いたままで結構です。</p><p lang="ko">식기류는 테이블에<br>놓은 채로 좋습니다.</p></div>
+            </div>
+          </div>
+        </figure>
+</div>
+<div class="rack-column rack-counter">
+<figure class="sign-stage" aria-label="料理の受取口の案内 / 요리 수취구의 안내">
+        <div class="sign-surface service-sign facility-plate material-printed material-painted" data-wear="light">
+          <span class="material-finish" aria-hidden="true"></span>
+          <i class="plate-fixing plate-fixing--left" aria-hidden="true"></i><i class="plate-fixing plate-fixing--right" aria-hidden="true"></i>
+          <div class="service-inner">
+            <div class="service-heading sign-copy"><p lang="ja">お知らせ</p><p lang="ko">알림</p></div>
+            <div class="service-copy sign-copy"><p lang="ja">メニューによっては<br>順番が前後します。</p><p lang="ko">메뉴에 따라서<br>순서가 앞뒤로 됩니다.</p></div>
+          </div>
+        </div>
+      </figure>
+<figure class="loose-sign loose-change place-change facility-plate material-engraved material-acrylic" aria-label="会計のお願い / 계산의 부탁" data-wear="medium">
+          <span class="material-finish" aria-hidden="true"></span>
+          <i class="plate-fixing plate-fixing--left" aria-hidden="true"></i><i class="plate-fixing plate-fixing--right" aria-hidden="true"></i>
+          <div class="loose-heading"><svg class="engraved-rule engraved-rule--horizontal" aria-hidden="true" focusable="false"><line x1="0" y1="2" x2="100%" y2="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span lang="ja">お願い</span><span lang="ko">부탁</span></div>
+          <div class="loose-copy"><p lang="ja">お釣りのないように<br>ご協力ください。</p><p lang="ko">거스름돈이 없도록<br>협력해 주십시오.</p></div>
+        </figure>
+</div>
+<div class="rack-column rack-parking">
+<figure class="sign-stage" aria-label="駐車禁止の案内 / 주차 금지의 안내">
+        <div class="sign-surface parking-sign facility-plate material-printed material-painted" data-wear="medium">
+          <span class="material-finish" aria-hidden="true"></span>
+          <i class="mount-hole hole-tl" aria-hidden="true"></i><i class="mount-hole hole-tr" aria-hidden="true"></i><i class="mount-hole hole-bl" aria-hidden="true"></i><i class="mount-hole hole-br" aria-hidden="true"></i>
+          <div class="parking-inner">
+            <div class="parking-heading sign-copy"><p lang="ja">無断駐車禁止</p><p lang="ko">무단주차 금지</p></div>
+            <div class="parking-copy sign-copy"><p lang="ja">ご用のない方の<br>駐車は<br>固くお断りします。</p><p lang="ko">용무가 없는 분의<br>주차는<br>단단히 거절합니다.</p></div>
+          </div>
+        </div>
+      </figure>
+<figure class="loose-sign loose-eating place-eating facility-plate material-label material-metal" aria-label="食べ歩き禁止の案内 / 먹으러 돌아다녀 금지의 안내" data-wear="medium">
+          <span class="material-finish" aria-hidden="true"></span>
+          <i class="plate-fixing plate-fixing--left" aria-hidden="true"></i><i class="plate-fixing plate-fixing--right" aria-hidden="true"></i>
+        <svg class="loose-symbol" viewBox="0 0 96 96" aria-hidden="true" focusable="false"><g fill="none" stroke="#252a2c" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="m48 34-7 22 12 10 5 17M41 55 29 77M46 37 33 46l-8-7M48 38l13 2 4-8"/></g><g fill="#252a2c"><circle cx="52" cy="21" r="7"/><circle cx="68" cy="25" r="4"/><circle cx="68" cy="34" r="4"/></g><path d="M68 21v20" stroke="#252a2c" stroke-width="2"/><g fill="none" stroke="#c8241b" stroke-width="6"><circle cx="48" cy="48" r="43"/><path d="m18 18 60 60"/></g></svg>
+        <div class="loose-heading"><span lang="ja">食べ歩き禁止</span><span lang="ko">먹으러 돌아다녀 금지</span></div>
+      </figure>
+</div>
+</div>
+</section>
+
+    <section class="about page-width" id="about" aria-labelledby="about-title">
+      <div class="origin-copy">
+        <h2 id="about-title" class="bilingual"><span lang="ja">この書体について</span><span lang="ko">이 서체에 대하여</span></h2>
+        <div class="bilingual origin-description"><p lang="ja">大阪の「雪濃湯」の看板と、対馬の店内のハングル案内をもとに作りました。「ト」に似たㅏ、低く横に広がるパッチム。そこで見つけた形を、11,172字のハングルに展開しています。</p><p lang="ko">오오사까의 ‘설농탕’ 간판과, 쓰시마 가게 내부의 한글 안내 표기를 바탕으로 만들었습니다. ‘ト’와 닮은 ㅏ, 낮고 옆으로 퍼지는 받침. 거기에서 발견한 모양을, 11,172자의 한글에 전개하고 있습니다.</p></div>
+        <details class="source-links">
+          <summary class="bilingual"><span lang="ja">参考にした看板</span><span lang="ko">참고로 한 간판</span></summary>
+          <a class="bilingual" href="https://blog.naver.com/alfresco/130148076533" target="_blank" rel="noopener noreferrer"><span lang="ja">大阪の雪濃湯 ↗</span><span lang="ko">오오사까의 설농탕</span></a>
+          <a class="bilingual" href="https://4travel.jp/travelogue/10785137" target="_blank" rel="noopener noreferrer"><span lang="ja">対馬の店内の案内 ↗</span><span lang="ko">쓰시마의 가게 안의 안내</span></a>
+        </details>
+
+      </div>
+      <div class="letter-specimens">
+        <figure class="shape-sample"><p class="letter-row seolnong">가 고 각</p><figcaption class="bilingual"><span lang="ja">「ト」に似たㅏ、低く横に広がるパッチム。</span><span lang="ko">‘ト’와 닮은 ㅏ, 낮고 옆으로 퍼지는 받침.</span></figcaption></figure>
+        <div class="cap-pair">
+          <figure><p class="seolnong fixed-default">하 차 꽃</p><figcaption class="bilingual"><span lang="ja">基本形</span><span lang="ko">기본형</span></figcaption></figure>
+          <figure><p class="seolnong fixed-upright">하 차 꽃</p><figcaption class="bilingual"><span lang="ja">上の線を縦に · ss01</span><span lang="ko">위의 선을 세로로 · ss01</span></figcaption></figure>
+        </div>
+        <div class="cap-note bilingual"><p lang="ja"><code>ss01</code> を <code>1</code> にすると、ㅎ・ㅊの上の線が一緒に縦になります。</p><p lang="ko"><code>ss01</code>을 <code>1</code>로 하면, ㅎ·ㅊ 위의 선이 함께 세로가 됩니다.</p></div>
+      </div>
+    </section>
+
+<section class="facility-application page-width" aria-label="施設の案内 / 시설의 안내">
+<div class="sign-rack facility-rack">
+<div class="rack-column rack-washroom">
+<figure class="application-mat" aria-label="お手洗いの案内板 / 화장실의 안내판">
+        <div class="wall-plate facility-plate material-engraved material-acrylic" data-wear="light">
+          <span class="material-finish" aria-hidden="true"></span>
+          <i class="screw screw-tl" aria-hidden="true"></i><i class="screw screw-tr" aria-hidden="true"></i><i class="screw screw-bl" aria-hidden="true"></i><i class="screw screw-br" aria-hidden="true"></i>
+          <p class="plate-request"><svg class="engraved-rule engraved-rule--horizontal" aria-hidden="true" focusable="false"><line x1="0" y1="2" x2="100%" y2="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="ja" lang="ja">お願い</span><span class="seolnong" lang="ko">부탁</span></p>
+          <div class="plate-copy">
+            <p class="plate-japanese ja" lang="ja">ご使用後は、<wbr>トイレットペーパーを<br>流してください。</p>
+            <p class="plate-korean seolnong" lang="ko">사용후는 화장지를 흘려주세요</p>
+          </div>
+        </div>
+      </figure>
+<figure class="loose-sign loose-water place-water facility-plate material-label material-metal" aria-label="飲用不可の案内 / 마실 수 없는 물의 안내" data-wear="light">
+          <span class="material-finish" aria-hidden="true"></span>
+          <i class="plate-fixing plate-fixing--left" aria-hidden="true"></i><i class="plate-fixing plate-fixing--right" aria-hidden="true"></i>
+        <div class="loose-heading"><span lang="ja">飲用不可</span><span lang="ko">음용 불가</span></div>
+        <svg class="loose-symbol" viewBox="0 0 96 96" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"><path d="M26 37h44l-5 39H31ZM29 52c7-5 12 5 19 0s12 5 19 0"/><path d="M48 13c-3 5-7 10-7 13a7 7 0 0 0 14 0c0-3-4-8-7-13Z"/></g><g fill="none" stroke="#c8241b" stroke-width="6"><circle cx="48" cy="48" r="43"/><path d="m18 18 60 60"/></g></svg>
+        <div class="loose-copy"><p lang="ja">この水は飲めません。</p><p lang="ko">이 물은<br>마실 수 없습니다.</p></div>
+      </figure>
+</div>
+<div class="rack-column rack-lounge">
+<figure class="sign-stage" aria-label="休憩室の案内 / 휴게실의 안내">
+        <div class="sign-surface rest-sign facility-plate material-engraved material-laminate" data-wear="light">
+          <svg class="engraved-frame" aria-hidden="true" focusable="false"><rect width="100%" height="100%" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          <span class="material-finish" aria-hidden="true"></span>
+          <div class="rest-inner">
+            <div class="rest-heading sign-copy"><p lang="ja">休憩室</p><p lang="ko">휴게실</p></div>
+            <div class="rest-copy sign-copy"><svg class="engraved-rule engraved-rule--vertical" aria-hidden="true" focusable="false"><line x1="2" y1="0" x2="2" y2="100%" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><p lang="ja">ごゆっくり<br>お過ごしください。</p><p lang="ko">천천히<br>지내 주십시오.</p></div>
+          </div>
+        </div>
+      </figure>
+<figure class="loose-sign loose-works place-works facility-plate material-engraved material-acrylic" aria-label="工事中の案内 / 공사 중의 안내" data-wear="medium">
+          <span class="material-finish" aria-hidden="true"></span>
+          <i class="plate-fixing plate-fixing--left" aria-hidden="true"></i><i class="plate-fixing plate-fixing--right" aria-hidden="true"></i>
+          <div class="loose-heading"><svg class="engraved-rule engraved-rule--horizontal" aria-hidden="true" focusable="false"><line x1="0" y1="2" x2="100%" y2="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span lang="ja">工事中</span><span lang="ko">공사 중</span></div>
+          <div class="loose-copy"><p lang="ja">館内の一部がお見苦しい<br>状態となっております。</p><p lang="ko">관내의 일부가 보기 괴로운<br>상태로 되어 있습니다.</p></div>
+        </figure>
+</div>
+<div class="rack-column rack-washbasin">
+<figure class="loose-sign loose-deer place-deer facility-plate material-engraved material-acrylic" aria-label="公園のお願い / 공원의 부탁" data-wear="light">
+          <svg class="engraved-frame" aria-hidden="true" focusable="false"><rect width="100%" height="100%" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          <span class="material-finish" aria-hidden="true"></span>
+          <i class="plate-fixing plate-fixing--left" aria-hidden="true"></i><i class="plate-fixing plate-fixing--right" aria-hidden="true"></i>
+            <svg class="loose-symbol" viewBox="0 0 64 80" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M26 32 20 17 21 6M20 17 12 13 8 6M22 23H10M38 32 44 17 43 6M44 17 52 13 56 6M42 23h12"/><path d="M25 33c-5-7-12-8-15-5 1 8 7 12 15 10M39 33c5-7 12-8 15-5-1 8-7 12-15 10M25 31c4-4 10-4 14 0l2 15c-1 8-5 14-9 17-4-3-8-9-9-17Z"/></g><g fill="currentColor"><circle cx="27" cy="42" r="1.6"/><circle cx="37" cy="42" r="1.6"/><path d="M28 53h8l-4 5Z"/></g></svg>
+            <div class="loose-copy"><p lang="ja">鹿をじらさないで<br>ください。</p><p lang="ko">사슴을 애태우지<br>말아 주십시오.</p></div>
+          </figure>
+<figure class="sign-stage" aria-label="洗面台の利用案内 / 세면대의 이용 안내">
+        <div class="sign-surface refrain-sign facility-plate material-engraved material-metal" data-wear="medium">
+          <span class="material-finish" aria-hidden="true"></span>
+          <i class="plate-fixing plate-fixing--left" aria-hidden="true"></i><i class="plate-fixing plate-fixing--right" aria-hidden="true"></i>
+          <div class="refrain-inner">
+            <div class="refrain-heading sign-copy"><svg class="engraved-rule engraved-rule--horizontal" aria-hidden="true" focusable="false"><line x1="0" y1="2" x2="100%" y2="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><p lang="ja">厳禁</p><p lang="ko">엄금</p></div>
+            <div class="refrain-copy sign-copy"><p lang="ja">洗面台での<br>ペットの洗浄は<br>ご遠慮ください。</p><p lang="ko">세면대에서<br>애완동물의 세척은<br>삼가 주십시오.</p></div>
+          </div>
+        </div>
+      </figure>
+</div>
+</div>
+</section>
+
+    <section class="download-section" id="download" aria-labelledby="download-title">
+      <div class="download-layout page-width">
+        <div class="download-heading">
+          <h2 id="download-title" class="bilingual"><span lang="ja">ご自由にお使いください。</span><span lang="ko">자유로 사용해 주십시오.</span></h2>
+          <p class="version">Seolnong · Regular 1.001</p>
+          <div class="license-copy bilingual"><p lang="ja">個人・商用を問わず無料です。改変・再配布もできます。再配布時はライセンスを添付してください。フォント単体での販売はできません。</p><p lang="ko">개인·상용을 묻지 않고 무료입니다. 수정·재배포도 됩니다. 재배포 때는 라이선스를 붙여 주십시오. 폰트만 따로 판매하는 것은 할 수 없습니다.</p></div>
+          <dl class="font-specs">
+            <div><dt class="bilingual"><span lang="ja">収録文字</span><span lang="ko">수록 문자</span></dt><dd class="bilingual"><span lang="ja">ハングル 11,172字<br>基本ラテン文字・数字・記号</span><span lang="ko">한글 11,172자<br>기본 라틴 문자·숫자·기호</span></dd></div>
+            <div><dt class="bilingual"><span lang="ja">形式</span><span lang="ko">형식</span></dt><dd>TTF · WOFF2</dd></div>
+          </dl>
+        </div>
+        <div class="download-details">
+          <div class="counter-board facility-plate material-printed material-painted" data-wear="none">
+          <span class="material-finish" aria-hidden="true"></span><div class="download-list">
+            <a class="download-bundle" href="./downloads/Seolnong-1.001.zip" download><span class="bundle-label"><span class="bilingual"><span lang="ja">まとめてダウンロード</span><span lang="ko">모아서 내려받다</span></span><small>TTF · WOFF2 · README · OFL</small></span><span class="bundle-format">ZIP <span aria-hidden="true">↓</span></span></a>
+            <div class="download-individuals">
+              <a href="./fonts/Seolnong-Regular.ttf" download><span class="bilingual"><span lang="ja">インストール用</span><span lang="ko">설치용</span></span><span class="file-format">TTF <span aria-hidden="true">↙</span></span></a>
+              <a href="./fonts/Seolnong-Regular.woff2" download><span class="bilingual"><span lang="ja">ウェブ用</span><span lang="ko">웹용</span></span><span class="file-format">WOFF2 <span aria-hidden="true">↙</span></span></a>
+            </div>
+          </div>
+          </div>
+          <div class="document-links"><a class="bilingual" href="./guide.html"><span lang="ja">ご利用案内 →</span><span lang="ko">이용의 안내</span></a><a class="bilingual" href="./OFL.txt" target="_blank" rel="noopener"><span lang="ja">ライセンス ↗</span><span lang="ko">라이선스</span></a></div>
+          <details class="web-code"><summary class="bilingual"><span lang="ja">ウェブで使う</span><span lang="ko">웹에서 쓰다</span></summary><div class="bilingual"><p lang="ja">このページでは、ハングルはソルロン体、日本語は Kosugi Maru、英字は Arimo を使っています。</p><p lang="ko">이 페이지에서는, 한글은 설농체, 일본어는 Kosugi Maru, 영자는 Arimo를 쓰고 있습니다.</p></div><pre><code>@font-face {
+  font-family: "Seolnong";
+  src: url("Seolnong-Regular.woff2") format("woff2");
+  font-feature-settings: "ss01" 0;
+}
+
+.sign:lang(ko) {
+  font-family: "Seolnong", sans-serif;
+  font-synthesis: none;
+}
+.sign:lang(ja) {
+  font-family: "Kosugi Maru", sans-serif;
+}
+.sign:lang(en) {
+  font-family: "Arimo", Arial, sans-serif;
+}</code></pre><div class="bilingual"><p lang="ja">Kosugi Maru と Arimo は別に読み込んでください。<code>ss01</code> を <code>1</code> にすると、ㅎ・ㅊの上の線が縦になります。</p><p lang="ko">Kosugi Maru와 Arimo는 따로 읽어 주십시오. <code>ss01</code>을 <code>1</code>로 하면, ㅎ·ㅊ 위의 선이 세로가 됩니다.</p></div></details>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="page-width footer">
+    <a class="bilingual" href="./guide.html#companions"><span lang="ja">このページの日本語は Kosugi Maru、英字は Arimo を使っています。</span><span lang="ko">이 페이지의 일본어는 Kosugi Maru, 영자는 Arimo를 쓰고 있습니다.</span></a>
+  </footer>
+</body>
+</html>
