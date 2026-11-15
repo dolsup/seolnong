@@ -19,7 +19,7 @@ FAMILY, STYLE = 'Seolnong', 'Regular'
 KOREAN_FAMILY = '설농체'
 VERSION = '1.001'
 POSTSCRIPT = 'Seolnong-Regular'
-COPYRIGHT = 'Copyright (c) 2026 The Seolnong Sign Project Authors.'
+COPYRIGHT = 'Copyright (c) 2026 dolsup (https://github.com/dolsup/seolnong)'
 LICENSE_DESCRIPTION = ('This Font Software is licensed under the SIL Open Font License, '
                        'Version 1.1. See OFL.txt or https://openfontlicense.org.')
 RELEASE_TIMESTAMP = int(datetime(2026, 11, 15, tzinfo=timezone.utc).timestamp()) + 2082844800
@@ -191,7 +191,7 @@ def build(output_dir):
         'version': f'Version {VERSION}',
         'copyright': COPYRIGHT,
         'description': 'Original Hangul display typeface using general Jamo composition rules, inspired by Osaka and Tsushima signs. Release 1.001 shortens the English family name and preserves the approved prototype v2 letterforms.',
-        'manufacturer': 'The Seolnong Sign Project Authors',
+        'manufacturer': 'dolsup',
         'licenseDescription': LICENSE_DESCRIPTION,
         'licenseInfoURL': 'https://openfontlicense.org',
     })

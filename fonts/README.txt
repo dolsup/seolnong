@@ -37,4 +37,4 @@ Regular · Version 1.001
   재배포할 때에는 OFL.txt의 저작권 고지와 라이선스 전문을 함께 유지하세요.
   정확한 조건은 동봉한 OFL.txt를 따릅니다.
 
-Copyright (c) 2026 The Seolnong Sign Project Authors.
+Copyright (c) 2026 dolsup (https://github.com/dolsup/seolnong)
