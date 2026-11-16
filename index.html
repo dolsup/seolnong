@@ -16,11 +16,11 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="옅은 파란색 바탕의 설농체 제목과 일본어·영어·한글 안내판 견본">
   <link rel="icon" href="./favicon.svg?v=seol" type="image/svg+xml">
-  <link rel="preload" href="./fonts/Seolnong-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Seolnong-Regular.woff2?v=1.002" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./assets/fonts/KosugiMaru-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./assets/fonts/Arimo-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="./assets/styles.css">
-  <script src="./assets/app.js" defer></script>
+  <link rel="stylesheet" href="./assets/styles.css?v=1.002">
+  <script src="./assets/app.js?v=1.002" defer></script>
 </head>
 <body>
   <a class="skip" href="#tester">文字を入れる / 문자를 넣다</a>
@@ -67,14 +67,14 @@
     <section class="tester page-width" id="tester" aria-labelledby="tester-title">
       <h2 id="tester-title" class="bilingual"><span lang="ja">文字を入れてください。</span><span lang="ko">문자를 넣어 주십시오.</span></h2>
       <div class="type-toolbar">
-        <label class="preset-select"><span class="sr-only">見本の文 / 견본의 문장</span><select id="sample-preset"><option value="shopping" selected>お店 / 가게</option><option value="notice">お手洗い / 화장실</option><option value="pangram">パングラム / 팬그램</option><option value="name">雪濃湯 / 설농탕</option><option value="custom" hidden>入力中 / 입력 중</option></select></label>
+        <label class="preset-select"><span class="sr-only">見本の文 / 견본의 문장</span><select id="sample-preset"><option value="lodging" selected>宿の案内 / 숙소의 안내</option><option value="rental">貸出 / 대여</option><option value="freezer">売店 / 매점</option><option value="shopping">お店 / 가게</option><option value="notice">お手洗い / 화장실</option><option value="pangram">パングラム / 팬그램</option><option value="name">雪濃湯 / 설농탕</option><option value="custom" hidden>入力中 / 입력 중</option></select></label>
         <label class="range-label"><span class="bilingual"><span lang="ja">文字の大きさ</span><span lang="ko">문자의 크기</span></span><input id="type-size" type="range" min="24" max="120" value="48" aria-label="文字の大きさ / 문자의 크기"><output id="size-value">48</output></label>
         <label class="cap-toggle"><input id="upright-toggle" type="checkbox"><span class="switch" aria-hidden="true"></span><span class="bilingual"><span lang="ja">ㅎ・ㅊの上の線を縦に</span><span lang="ko">ㅎ·ㅊ 위의 선을 세로로</span></span></label>
         <button id="reset-type" class="quiet-button bilingual" type="button"><span lang="ja">元に戻す</span><span lang="ko">원래로 돌리다</span></button>
       </div>
       <label class="sr-only" for="type-input">文字を入れてください / 문자를 넣어 주십시오</label>
-      <div class="shop-board"><textarea id="type-input" class="seolnong" rows="1" spellcheck="false" maxlength="400">상품에는 손을 대지 말아주세요.
-계산은 이쪽에서 부탁합니다.</textarea></div>
+      <div class="shop-board"><textarea id="type-input" class="seolnong" rows="1" spellcheck="false" maxlength="400">야간의 체크인은 프런트 옆의 벨을 눌러 주십시오.
+휴게실의 물과 커피는 무료로 준비하고 있습니다.</textarea></div>
       <p id="font-status" role="status" class="font-status"></p>
     </section>
 
@@ -227,7 +227,7 @@
       <div class="download-layout page-width">
         <div class="download-heading">
           <h2 id="download-title" class="bilingual"><span lang="ja">ご自由にお使いください。</span><span lang="ko">자유로 사용해 주십시오.</span></h2>
-          <p class="version">Seolnong · Regular 1.001</p>
+          <p class="version">Seolnong · Regular 1.002</p>
           <div class="license-copy bilingual"><p lang="ja">個人・商用を問わず無料です。改変・再配布もできます。再配布時はライセンスを添付してください。フォント単体での販売はできません。</p><p lang="ko">개인·상용을 묻지 않고 무료입니다. 수정·재배포도 됩니다. 재배포 때는 라이선스를 붙여 주십시오. 폰트만 따로 판매하는 것은 할 수 없습니다.</p></div>
           <dl class="font-specs">
             <div><dt class="bilingual"><span lang="ja">収録文字</span><span lang="ko">수록 문자</span></dt><dd class="bilingual"><span lang="ja">ハングル 11,172字<br>基本ラテン文字・数字・記号</span><span lang="ko">한글 11,172자<br>기본 라틴 문자·숫자·기호</span></dd></div>
@@ -237,10 +237,10 @@
         <div class="download-details">
           <div class="counter-board facility-plate material-printed material-painted" data-wear="none">
           <span class="material-finish" aria-hidden="true"></span><div class="download-list">
-            <a class="download-bundle" href="./downloads/Seolnong-1.001.zip" download><span class="bundle-label"><span class="bilingual"><span lang="ja">まとめてダウンロード</span><span lang="ko">모아서 내려받다</span></span><small>TTF · WOFF2 · README · OFL</small></span><span class="bundle-format">ZIP <span aria-hidden="true">↓</span></span></a>
+            <a class="download-bundle" href="./downloads/Seolnong-1.002.zip" download><span class="bundle-label"><span class="bilingual"><span lang="ja">まとめてダウンロード</span><span lang="ko">모아서 내려받다</span></span><small>TTF · WOFF2 · README · OFL</small></span><span class="bundle-format">ZIP <span aria-hidden="true">↓</span></span></a>
             <div class="download-individuals">
-              <a href="./fonts/Seolnong-Regular.ttf" download><span class="bilingual"><span lang="ja">インストール用</span><span lang="ko">설치용</span></span><span class="file-format">TTF <span aria-hidden="true">↙</span></span></a>
-              <a href="./fonts/Seolnong-Regular.woff2" download><span class="bilingual"><span lang="ja">ウェブ用</span><span lang="ko">웹용</span></span><span class="file-format">WOFF2 <span aria-hidden="true">↙</span></span></a>
+              <a href="./fonts/Seolnong-Regular.ttf?v=1.002" download><span class="bilingual"><span lang="ja">インストール用</span><span lang="ko">설치용</span></span><span class="file-format">TTF <span aria-hidden="true">↙</span></span></a>
+              <a href="./fonts/Seolnong-Regular.woff2?v=1.002" download><span class="bilingual"><span lang="ja">ウェブ用</span><span lang="ko">웹용</span></span><span class="file-format">WOFF2 <span aria-hidden="true">↙</span></span></a>
             </div>
           </div>
           </div>
@@ -265,6 +265,16 @@
 .sign:lang(en) {
   font-family: "Arimo", Arial, sans-serif;
 }</code></pre><div class="bilingual"><p lang="ja">Kosugi Maru と Arimo は別に読み込んでください。<code>ss01</code> を <code>1</code> にすると、ㅎ・ㅊの上の線が縦になります。</p><p lang="ko">Kosugi Maru와 Arimo는 따로 읽어 주십시오. <code>ss01</code>을 <code>1</code>로 하면, ㅎ·ㅊ 위의 선이 세로가 됩니다.</p></div></details>
+          <details>
+            <summary class="bilingual"><span lang="ja">更新の記録</span><span lang="ko">갱신의 기록</span></summary>
+            <div id="updates">
+              <p class="update-version">1.002 · <time datetime="2026-11-16">2026.11.16</time></p>
+              <div class="bilingual">
+                <p lang="ja">「품」「물」「팔」などの平行する線の間隔を調整し、見本文を更新しました。</p>
+                <p lang="ko">‘품’, ‘물’, ‘팔’ 등의 평행 획 간격을 조정하고, 견본 문장을 바꿨습니다.</p>
+              </div>
+            </div>
+          </details>
         </div>
       </div>
     </section>

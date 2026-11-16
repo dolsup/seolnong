@@ -2,7 +2,7 @@
 
 일본의 한국어 안내판에서 발견한 글자 모양을 바탕으로 만든 한글 글꼴입니다. ‘ト’와 닮은 ㅏ와 낮고 옆으로 퍼지는 받침이 특징입니다. 간판, 제목, 짧은 문구에 어울립니다.
 
-[글자 써 보기](https://dolsup.github.io/seolnong/) · [설농체 1.001 내려받기 (ZIP)](https://github.com/dolsup/seolnong/raw/refs/heads/main/downloads/Seolnong-1.001.zip) · [이용 안내](https://dolsup.github.io/seolnong/guide.html)
+[글자 써 보기](https://dolsup.github.io/seolnong/) · [설농체 1.002 내려받기 (ZIP)](https://github.com/dolsup/seolnong/raw/refs/heads/main/downloads/Seolnong-1.002.zip) · [이용 안내](https://dolsup.github.io/seolnong/guide.html) · [갱신의 기록](https://dolsup.github.io/seolnong/#updates)
 
 ![설농체와 일본어·영어·한글 안내판 견본](assets/og.png)
 

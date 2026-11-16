@@ -1,6 +1,9 @@
 (() => {
   'use strict';
   const presets = {
+    lodging: '야간의 체크인은 프런트 옆의 벨을 눌러 주십시오.\n휴게실의 물과 커피는 무료로 준비하고 있습니다.',
+    rental: '예약의 변경은 이쪽에서 부탁합니다.\n빌린 물품은 물기를 닦고 돌려 주십시오.\n젖은 그대로 가방에 넣는 것은 삼가 주십시오.',
+    freezer: '품절의 때는 옆의 매점을 이용해 주십시오.\n냉동고의 뚜껑은 조용히 닫아 주십시오.\n얼음만 가지고 돌아가는 것은 삼가 주십시오.',
     pangram: '컴퓨터 비밀번호의 별표만 훔쳐서야 도둑질은 되나?',
     notice: '사용후는 화장지를 흘려주세요',
     shopping: '상품에는 손을 대지 말아주세요.\n계산은 이쪽에서 부탁합니다.',
@@ -44,7 +47,7 @@
   select.addEventListener('change', () => {if (presets[select.value]) {input.value = presets[select.value]; render();}});
   size.addEventListener('input', render);
   caps.addEventListener('change', render);
-  document.querySelector('#reset-type').addEventListener('click', () => {input.value=presets.shopping;size.value=defaultSize();caps.checked=false;render();});
+  document.querySelector('#reset-type').addEventListener('click', () => {input.value=presets.lodging;size.value=defaultSize();caps.checked=false;render();});
   window.addEventListener('resize', fitHeight, {passive:true});
   render();
 

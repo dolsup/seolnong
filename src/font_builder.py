@@ -17,15 +17,17 @@ from fontTools.feaLib.builder import addOpenTypeFeaturesFromString
 UPM = 1000
 FAMILY, STYLE = 'Seolnong', 'Regular'
 KOREAN_FAMILY = '설농체'
-VERSION = '1.001'
+VERSION = '1.002'
 POSTSCRIPT = 'Seolnong-Regular'
 COPYRIGHT = 'Copyright (c) 2026 dolsup (https://github.com/dolsup/seolnong)'
 LICENSE_DESCRIPTION = ('This Font Software is licensed under the SIL Open Font License, '
                        'Version 1.1. See OFL.txt or https://openfontlicense.org.')
-RELEASE_TIMESTAMP = int(datetime(2026, 11, 15, tzinfo=timezone.utc).timestamp()) + 2082844800
+RELEASE_TIMESTAMP = int(datetime(2026, 11, 16, tzinfo=timezone.utc).timestamp()) + 2082844800
 SBASE, SCOUNT = 0xAC00, 11172
 ASCENT, DESCENT = 900, -250
 CAP_CONSONANTS = frozenset({'h', 'ch'})
+SAMPLE_TEXT = ('야간의 체크인은 프런트 옆의 벨을 눌러 주십시오. '
+               '휴게실의 물과 커피는 무료로 준비하고 있습니다.')
 
 
 def contains_cap(name, design):
@@ -190,7 +192,7 @@ def build(output_dir):
         'fullName': f'{FAMILY} {STYLE}', 'psName': POSTSCRIPT,
         'version': f'Version {VERSION}',
         'copyright': COPYRIGHT,
-        'description': 'Original Hangul display typeface using general Jamo composition rules, inspired by Osaka and Tsushima signs. Release 1.001 shortens the English family name and preserves the approved prototype v2 letterforms.',
+        'description': 'Original Hangul display typeface using general Jamo composition rules, inspired by Osaka and Tsushima signs. Release 1.002 refines spacing between parallel strokes while preserving close nonparallel joins.',
         'manufacturer': 'dolsup',
         'licenseDescription': LICENSE_DESCRIPTION,
         'licenseInfoURL': 'https://openfontlicense.org',
@@ -203,6 +205,10 @@ def build(output_dir):
                           (4, KOREAN_FAMILY+' '+STYLE),
                           (16, KOREAN_FAMILY), (17, STYLE)]:
         names.setName(text, name_id, 3, 1, 0x412)
+    # Name ID 19 is an optional specimen for font viewers. Keep the Korean
+    # text in a language-neutral Unicode record and a Korean Windows record.
+    names.setName(SAMPLE_TEXT, 19, 0, 4, 0)
+    names.setName(SAMPLE_TEXT, 19, 3, 1, 0x412)
     fb.setupOS2(version=4, sTypoAscender=ASCENT, sTypoDescender=DESCENT,
         sTypoLineGap=0, usWinAscent=950, usWinDescent=250,
         usWeightClass=400, usWidthClass=5, fsSelection=0xC0, fsType=0,

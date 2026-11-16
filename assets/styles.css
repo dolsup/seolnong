@@ -1,6 +1,6 @@
-@font-face{font-family:"Seolnong";src:url("../fonts/Seolnong-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;font-feature-settings:"ss01" 0}
-@font-face{font-family:"Seolnong KR";src:url("../fonts/Seolnong-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;unicode-range:U+1100-11FF,U+3130-318F,U+AC00-D7A3;font-feature-settings:"ss01" 0}
-@font-face{font-family:"Seolnong KR Upright";src:url("../fonts/Seolnong-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;unicode-range:U+1100-11FF,U+3130-318F,U+AC00-D7A3;font-feature-settings:"ss01" 1}
+@font-face{font-family:"Seolnong";src:url("../fonts/Seolnong-Regular.woff2?v=1.002") format("woff2");font-weight:400;font-style:normal;font-display:swap;font-feature-settings:"ss01" 0}
+@font-face{font-family:"Seolnong KR";src:url("../fonts/Seolnong-Regular.woff2?v=1.002") format("woff2");font-weight:400;font-style:normal;font-display:swap;unicode-range:U+1100-11FF,U+3130-318F,U+AC00-D7A3;font-feature-settings:"ss01" 0}
+@font-face{font-family:"Seolnong KR Upright";src:url("../fonts/Seolnong-Regular.woff2?v=1.002") format("woff2");font-weight:400;font-style:normal;font-display:swap;unicode-range:U+1100-11FF,U+3130-318F,U+AC00-D7A3;font-feature-settings:"ss01" 1}
 @font-face{font-family:"Kosugi Maru";src:url("./fonts/KosugiMaru-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:"Arimo";src:url("./fonts/Arimo-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 /* White and sign blue anchor the page; individual notices keep their own colors. */
@@ -114,11 +114,13 @@ button{border-radius:0}
 .font-specs dd{margin:0}
 .font-specs dd:not(.bilingual){font-family:var(--latin);line-height:1.65}
 .document-links{display:flex;flex-wrap:wrap;gap:18px 30px;font-size:12px;margin-top:23px}
-.web-code{border-top:1px solid var(--line);margin-top:27px;font-size:12px}
-.web-code summary{padding:17px 0;list-style:disclosure-closed}
-.web-code[open] summary{list-style:disclosure-open}
-.web-code p{line-height:1.8;color:var(--muted)}
-.web-code .bilingual>[lang="ko"]{margin-top:9px;word-break:keep-all}
+.download-details > details{border-top:1px solid var(--line);font-size:12px}
+.document-links + details{margin-top:27px}
+.download-details > details > summary{padding:17px 0;list-style:disclosure-closed}
+.download-details > details[open] > summary{list-style:disclosure-open}
+.download-details > details p{line-height:1.8;color:var(--muted)}
+.download-details > details .bilingual>[lang="ko"]{margin-top:9px;word-break:keep-all}
+.update-version{margin-bottom:7px;font-family:var(--latin)}
 .web-code pre{background:var(--paper);font-size:11px;line-height:1.8;padding:18px;overflow:auto;margin-block:16px}
 code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
 .footer{padding-block:25px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
@@ -186,7 +188,8 @@ code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
 .font-specs{font-size:11px;margin-top:23px}
 .font-specs>div{grid-template-columns:75px 1fr;gap:18px}
 .document-links{font-size:11px;gap:20px;margin-top:21px}
-.web-code{font-size:11px;margin-top:24px}
+.download-details > details{font-size:11px}
+.document-links + details{margin-top:24px}
 .web-code pre{font-size:10px;padding:14px}
 .footer{padding-block:22px;font-size:10px}
 }

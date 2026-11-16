@@ -27,6 +27,15 @@ PAIRS = {'gg':('g','g'),'dd':('d','d'),'bb':('b','b'),'ss':('s','s'),'jj':('j','
          'rb':('r','b'),'rs':('r','s'),'rt':('r','t'),'rp':('r','p'),'rh':('r','h'),'bs':('b','s')}
 PAIR_PRESSURE = {'n': .90, 'r': 1.15, 'm': 1.10, 'b': 1.10,
                  'ch': 1.10, 't': 1.10, 'p': 1.05, 'h': 1.25}
+# Straight lower runs from the elementary consonant drawings. Calibrated
+# masters (including R, T and shallow N) are inspected directly below.
+LOWER_RUNS = {
+    'n': ((.32, 0, 1, .035),),
+    'd': ((.09, 0, 1, .025),),
+    'm': ((0, 0, 1, 0),),
+    'b': ((.06, 0, .94, 0),),
+    'p': ((0, 0, 1, .015),),
+}
 
 
 class Drawing:
@@ -78,6 +87,98 @@ def pair_boxes(name, box, role='final'):
 def smoothstep(lo, hi, value):
     t = max(0.0, min(1.0, (value - lo) / (hi - lo)))
     return t * t * (3 - 2 * t)
+
+
+def lower_straight_runs(name, box, variant=None):
+    """Return long-stroke candidates, excluding curved and diagonal terminals."""
+    if name in PAIRS:
+        a, b = PAIRS[name]
+        ba, bb = pair_boxes(name, box, role='initial')
+        return lower_straight_runs(a, ba) + lower_straight_runs(b, bb)
+    key = 'n.shallow' if name == 'n' and variant == 'shallow' else name + '.initial'
+    runs = []
+    if key in MASTERS:
+        for commands in MASTERS[key]['paths']:
+            start = previous = None
+            for command in commands:
+                op = command[0]
+                point = tuple(command[-2:]) if op != 'Z' else start
+                if op == 'M':
+                    start = point
+                elif op in {'L', 'Z'} and previous is not None:
+                    if max(previous[1], point[1]) <= .25:
+                        runs.append((*previous, *point))
+                previous = point
+    else:
+        runs = LOWER_RUNS.get(name, ())
+    x0, y0, x1, y1 = box
+    w, h = x1 - x0, y1 - y0
+    return [(x0 + ax*w, y0 + ay*h, x0 + bx*w, y0 + by*h)
+            for ax, ay, bx, by in runs]
+
+
+def parallel_spacing_shift(runs, lower_bar, width=STROKE):
+    """Adjust only closely facing, substantially overlapping straight runs.
+
+    This is an optical profile metric, not the minimum outline distance:
+    short contacts, curves and crossings deliberately retain their placement.
+    """
+    bx0, by0, bx1, by1 = lower_bar
+    if bx1 <= bx0:
+        return 0.0
+    bar_slope = (by1 - by0) / (bx1 - bx0)
+    shift = 0.0
+    for ax0, ay0, ax1, ay1 in runs:
+        if ax1 <= ax0:
+            continue
+        slope = (ay1 - ay0) / (ax1 - ax0)
+        if abs(math.atan(slope) - math.atan(bar_slope)) > math.radians(4):
+            continue
+        lo, hi = max(ax0, bx0), min(ax1, bx1)
+        if hi - lo < 2 * width:
+            continue
+        # Both lines are nearly horizontal. Projecting their centre lines
+        # vertically and subtracting the common pen gives a stable profile gap.
+        gap = min(ay0 + (x-ax0)*slope - by0 - (x-bx0)*bar_slope
+                  for x in (lo, hi)) - width
+        if 0 <= gap < width * .5:
+            shift = max(shift, min(width * .5, width * (2/3) - gap))
+    return shift
+
+
+def space_parallel_components(layout):
+    """Open repeated parallel bars without regularising other close contacts."""
+    runs = lower_straight_runs(layout['initial_name'], layout['initial_box'],
+                               layout['initial_variant'])
+    if not runs:
+        return
+    fp = layout['final']
+    if layout['vowel_class'] == 'vertical':
+        if fp['kind'] != 'curl':
+            return
+        x0, y0, x1, y1 = fp['box']
+        top = MASTERS['r.final']['paths'][0][:2]
+        bar = (x0 + top[0][1]*(x1-x0), y1,
+               x0 + top[1][1]*(x1-x0), y1)
+        shift = parallel_spacing_shift(runs, bar)
+        if shift:
+            layout['final'] = {**fp, 'box': (x0, y0-shift, x1, y1-shift)}
+        return
+    x0, y0, x1, y1 = layout['horizontal_box']
+    v = layout['vowel_index']
+    hv = v if v in HORIZONTAL else COMPOUND[v][0]
+    # Only the actual long bar is compared. The ends of O/YO's upright
+    # branches are not treated as an imaginary parallel horizontal stroke.
+    if hv in {8, 12}:
+        bar = (x0, y0, x1, y0 + layout['horizontal_slope'])
+    elif hv in {13, 17}:
+        bar = (x0, y1, x1, y1)
+    else:
+        bar = (x0, (y0+y1)/2, x1, (y0+y1)/2)
+    shift = parallel_spacing_shift(runs, bar)
+    if shift:
+        ix0, iy0, ix1, iy1 = layout['initial_box']
+        layout['initial_box'] = (ix0, iy0+shift, ix1, iy1)
 
 
 def legacy_giyeok_path(box, role='initial'):
@@ -173,7 +274,7 @@ def consonant(name,box,width=STROKE,role='initial',form='parallel',variant=None)
 
 def vertical_vowel(d,v,x,y0,y1,left=135,right=140,width=STROKE,
                    long_anchor=None, photo_eo=False, left_floor=None):
-    h=y1-y0; cy=y0+h*.52; dy=h*.20
+    h=y1-y0; cy=y0+h*.52; dy=max(h*.20, 2*width)
     if v in {0,2}:
         lean=h*(3/127)
         d.line(x-lean/2,y0,x+lean/2,y1,width)
@@ -290,6 +391,7 @@ def layout_for(l,v,t):
             # Align the medial arm with the opening in the shared S master.
             q['vertical_x']=747.9
             q['long_eo_anchor']=(x0+(x1-x0)*(68/90),y0+(y1-y0)*(53/107))
+        if t: space_parallel_components(q)
         return q
     if v in HORIZONTAL:
         q['initial_box']=(215,570 if t else 355,785,820)
@@ -313,6 +415,7 @@ def layout_for(l,v,t):
         q['horizontal_box']=(hx0,370,hx1,455)
         if v not in HORIZONTAL: q['vertical_y']=(370,820)
         q['final']=limit_final_height(fp,285)
+    if t: space_parallel_components(q)
     return q
 
 
