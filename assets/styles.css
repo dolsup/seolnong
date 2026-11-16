@@ -1,6 +1,6 @@
-@font-face{font-family:"Seolnong";src:url("../fonts/Seolnong-Regular.woff2?v=1.002") format("woff2");font-weight:400;font-style:normal;font-display:swap;font-feature-settings:"ss01" 0}
-@font-face{font-family:"Seolnong KR";src:url("../fonts/Seolnong-Regular.woff2?v=1.002") format("woff2");font-weight:400;font-style:normal;font-display:swap;unicode-range:U+1100-11FF,U+3130-318F,U+AC00-D7A3;font-feature-settings:"ss01" 0}
-@font-face{font-family:"Seolnong KR Upright";src:url("../fonts/Seolnong-Regular.woff2?v=1.002") format("woff2");font-weight:400;font-style:normal;font-display:swap;unicode-range:U+1100-11FF,U+3130-318F,U+AC00-D7A3;font-feature-settings:"ss01" 1}
+@font-face{font-family:"Seolnong";src:url("../fonts/Seolnong-Regular.woff2?v=1.003") format("woff2");font-weight:400;font-style:normal;font-display:swap;font-feature-settings:"ss01" 0}
+@font-face{font-family:"Seolnong KR";src:url("../fonts/Seolnong-Regular.woff2?v=1.003") format("woff2");font-weight:400;font-style:normal;font-display:swap;unicode-range:U+1100-11FF,U+3130-318F,U+AC00-D7A3;font-feature-settings:"ss01" 0}
+@font-face{font-family:"Seolnong KR Upright";src:url("../fonts/Seolnong-Regular.woff2?v=1.003") format("woff2");font-weight:400;font-style:normal;font-display:swap;unicode-range:U+1100-11FF,U+3130-318F,U+AC00-D7A3;font-feature-settings:"ss01" 1}
 @font-face{font-family:"Kosugi Maru";src:url("./fonts/KosugiMaru-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:"Arimo";src:url("./fonts/Arimo-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 /* White and sign blue anchor the page; individual notices keep their own colors. */
@@ -71,7 +71,7 @@ button{border-radius:0}
 .quiet-button{padding:0;border:0;background:transparent;font-size:12px;text-align:left}
 .quiet-button:hover{color:var(--red)}
 #type-input{width:100%;display:block;resize:none;border:0;border-radius:0;background:transparent;font-size:48px;line-height:1.65;padding:30px 0;min-height:210px;max-height:750px;overflow-y:auto;word-break:keep-all;overflow-wrap:anywhere;outline-offset:8px}
-#type-input[data-caps="1"]{font-family:"Seolnong KR Upright","Seolnong",var(--jp)}
+#type-input[data-caps="1"]{font-family:"Seolnong",var(--jp)}
 .font-status:empty{display:none}
 .font-status{color:var(--red);font-size:13px;margin-top:12px}
 .sign-application{background:var(--wall);padding-block:62px}
@@ -85,7 +85,7 @@ button{border-radius:0}
 .screw{position:absolute;width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#f6f8fa,#858d95);box-shadow:0 1px 1px #77818b}
 .screw:before{content:"";position:absolute;width:5px;left:1.5px;top:3.5px;height:1px;background:#626c77;transform:rotate(-35deg)}
 .screw-tl{top:12px;left:13px}.screw-tr{top:12px;right:13px}.screw-bl{bottom:12px;left:13px}.screw-br{bottom:12px;right:13px}
-.about{display:grid;grid-template-columns:1fr 1.15fr;gap:10%;padding-block:82px 76px}
+.about{display:grid;grid-template-columns:1fr 1.15fr;gap:32px 10%;padding-block:82px 76px}
 .origin-copy h2{font-size:23px;margin-bottom:26px}
 .origin-description{font-size:15px}
 .origin-description>[lang="ja"]{line-height:1.9}
@@ -97,11 +97,14 @@ button{border-radius:0}
 .cap-pair{display:grid;grid-template-columns:1fr 1fr;gap:24px;border-top:1px solid var(--line);padding-top:22px}
 .cap-pair p{font-size:clamp(35px,4vw,61px);line-height:1.6;white-space:nowrap;letter-spacing:-.035em;color:var(--blue)}
 .cap-pair figcaption{font-size:12px;margin-top:12px;color:var(--muted)}
-.cap-note{font-size:12px;margin-top:23px;color:var(--muted)}
-.cap-note>[lang="ja"],.cap-note>[lang="ko"]{line-height:1.8}
-.cap-note>[lang="ko"]{margin-top:8px;word-break:keep-all}
 .fixed-default{font-family:"Seolnong KR",var(--jp)}
 .fixed-upright{font-family:"Seolnong KR Upright","Seolnong",var(--jp)}
+.type-features{grid-column:1/-1;border-top:1px solid var(--line);padding-top:22px;font-size:12px}
+.type-features h3{font-size:16px}
+.type-features dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%, 220px),1fr));gap:20px 32px;margin:16px 0}
+.type-features dd{margin:6px 0 0;color:var(--muted)}
+.type-features dd>[lang="ko"]{word-break:keep-all}
+.type-features > a{display:inline-block}
 .download-section{border-top:1px solid var(--line);padding-block:66px 65px;background:var(--sky)}
 .download-layout{display:grid;grid-template-columns:1fr 1.15fr;gap:10%}
 .download-heading h2{font-size:24px;line-height:1.5}
@@ -114,6 +117,7 @@ button{border-radius:0}
 .font-specs dd{margin:0}
 .font-specs dd:not(.bilingual){font-family:var(--latin);line-height:1.65}
 .document-links{display:flex;flex-wrap:wrap;gap:18px 30px;font-size:12px;margin-top:23px}
+.document-links .link-arrow{font-family:"Seolnong",sans-serif}
 .download-details > details{border-top:1px solid var(--line);font-size:12px}
 .document-links + details{margin-top:27px}
 .download-details > details > summary{padding:17px 0;list-style:disclosure-closed}
@@ -121,6 +125,7 @@ button{border-radius:0}
 .download-details > details p{line-height:1.8;color:var(--muted)}
 .download-details > details .bilingual>[lang="ko"]{margin-top:9px;word-break:keep-all}
 .update-version{margin-bottom:7px;font-family:var(--latin)}
+#updates > .bilingual + .update-version{margin-top:20px}
 .web-code pre{background:var(--paper);font-size:11px;line-height:1.8;padding:18px;overflow:auto;margin-block:16px}
 code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
 .footer{padding-block:25px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
@@ -135,7 +140,7 @@ code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
 .hero-actions{gap:22px;margin-top:27px}
 .download-main{font-size:14px;gap:17px}
 .range-label{gap:10px}.range-label input{width:85px}
-.about,.download-layout{gap:7%}
+.about,.download-layout{column-gap:7%}
 .download-heading h2{font-size:21px}
 }
 @media(max-width:760px){
@@ -178,7 +183,6 @@ code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
 .cap-pair{gap:18px;padding-top:19px}
 .cap-pair p{font-size:clamp(31px,10vw,56px);line-height:1.6}
 .cap-pair figcaption{font-size:11px;margin-top:8px}
-.cap-note{font-size:11px;margin-top:20px}
 .download-section{padding-block:42px 37px}
 .download-layout{display:block}
 .download-heading{margin-bottom:31px}
@@ -1138,3 +1142,19 @@ code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
 .source-links[open] summary { list-style: disclosure-open; }
 .source-links > a { display: block; width: fit-content; margin-top: 15px; }
 @media (max-width: 700px) { .source-links { margin-top: 23px; } }
+
+/* The specimen uses the complete face so numeral options affect its digits. */
+.type-options { display: flex; flex-wrap: wrap; gap: 18px 35px; min-width: 0; margin: 0; padding: 17px 0 0; border: 0; font-size: 11px; }
+.type-options .cap-toggle { font-size: inherit; }
+.shop-board #type-input { font-kerning: normal; }
+.shop-board #type-input[data-direction="vertical"] { writing-mode: vertical-rl; text-orientation: mixed; height: 420px; min-height: 0; padding: 30px 28px; overflow: auto; word-break: normal; }
+.sign-symbol { font-family: "Seolnong", var(--jp); }
+.rack-lounge > .occupied-sign { width: 166px; max-width: 100%; padding: 34px 25px 30px; color: var(--blue); }
+.occupied-columns { display: flex; flex-direction: row-reverse; justify-content: center; gap: 20px; }
+.occupied-columns > p { writing-mode: vertical-rl; text-orientation: upright; font-size: 39px; line-height: 1; letter-spacing: .12em; white-space: nowrap; }
+.occupied-columns > [lang="ja"] { font-family: var(--jp); }
+.occupied-columns > [lang="ko"] { font-family: "Seolnong", var(--jp); }
+@media (max-width: 760px) {
+  .type-options { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 15px 16px; font-size: 10px; }
+  .shop-board #type-input[data-direction="vertical"] { height: 360px; padding: 24px 18px; }
+}

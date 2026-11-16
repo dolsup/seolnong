@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 dolsup
+# SPDX-License-Identifier: OFL-1.1
 """Rebuild the release TTF, WOFF2, and four-file download ZIP.
 
 From the repository root, run these commands in a Python 3.12 environment:

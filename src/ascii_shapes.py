@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 dolsup
+# SPDX-License-Identifier: OFL-1.1
 """Latin letter and digit centerlines used by the Seolnong drawing module."""
 LATIN={
  'A':[[('M',0,0),('L',.5,1),('L',1,0)],[('M',.2,.39),('L',.8,.39)]],

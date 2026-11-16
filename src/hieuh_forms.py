@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 dolsup
+# SPDX-License-Identifier: OFL-1.1
 """Shared Hieuh bowl geometry with horizontal and upright cap styles."""
 
 from .cap_forms import cap_geometry, cap_profiles, draw_head

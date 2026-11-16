@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 dolsup
+# SPDX-License-Identifier: OFL-1.1
 """Seolnong Hangul composition and centerline drawings.
 
 Every modern syllable uses shared initial, medial, and final components.
@@ -10,12 +12,15 @@ import pathops
 from .hieuh_forms import draw_hieuh, h_geometry
 from .cap_forms import cap_geometry, draw_head
 from .ascii_shapes import LATIN, LOWER
+from . import sign_symbols
 
 ROOT = Path(__file__).resolve().parent
 STROKE = 60.0
 MASTERS = json.loads((ROOT / 'jamo_masters.json').read_text(encoding='utf-8'))
 EXTRA_CODEPOINTS = [0x00B7, 0x2013, 0x2014, 0x2018, 0x2019, 0x201C, 0x201D,
                     0x2026, 0x2190, 0x2191, 0x2192, 0x2193, 0x20A9]
+EXTRA_CODEPOINTS += list(sign_symbols.EXTRA_CODEPOINTS)
+VERTICAL_ALTERNATES = sign_symbols.VERTICAL_ALTERNATES
 L_NAMES = ['g','gg','n','d','dd','r','m','b','bb','s','ss','o','j','jj','ch','k','t','p','h']
 T_NAMES = [None,'g','gg','gs','n','nj','nh','d','r','rg','rm','rb','rs','rt','rp','rh',
            'm','b','bs','s','ss','o','j','ch','k','t','p','h']
@@ -470,6 +475,8 @@ def draw_jamo(kind,index,pen,form='parallel'):
 
 
 def draw_ascii(ch,pen):
+    if sign_symbols.supports(ch):
+        return sign_symbols.draw_symbol(ch,pen)
     if ch==' ':return 430
     d=Drawing();adv=600
     if ch in LATIN or ch in LOWER:
@@ -536,3 +543,7 @@ def draw_ascii(ch,pen):
         d.line(90,440,910,440,STROKE);d.line(90,320,910,320,STROKE);adv=1000
     else:raise ValueError(f'Unsupported ASCII/extra character {ch!r}')
     d.finish(pen);return adv
+
+
+def draw_vertical(ch, pen):
+    return sign_symbols.draw_vertical(ch, pen)
